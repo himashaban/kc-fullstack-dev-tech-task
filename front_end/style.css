@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.category-menu {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.category-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.category-item:hover {
+    background-color: #e0e0e0;
+}
+
+.courses-section {
+    width: 75%;
+    margin-left: 20px;
+}
+
+.course-item {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    flex: 1 1 calc(33.333% - 20px);
+    /* Three items per row with space */
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.course-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.category-name {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #333;
+}
+
+#coursesField {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Space between items */
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .course-item {
+        flex: 1 1 100%;
+        /* Single item per row for smaller screens */
+        max-width: 100%;
+    }
+
+    .category-menu {
+        display: none;
+        /* Hide category menu on smaller screens */
+    }
+
+    .courses-section {
+        width: 100%;
+        /* Full width for courses section */
+        margin-left: 0;
+    }
+}
